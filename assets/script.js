@@ -1,6 +1,8 @@
 const apiKey = "20f9a6ae4f100c34e7ae026eafd6150d";
 var cityName = document.getElementById("city-name");
 var searchWeather = document.getElementById("search-weather");
+const localeSettings = {};
+dayjs.locale(localeSettings);
 
 var day = [
     document.getElementById("day1"),
@@ -84,8 +86,15 @@ function getWeather(lat, lon) {
             // console.log(data);
             var city = data.city.name;
             console.log(data);
-            for (var i = 0; i < 6; i++) {
-                day[i].textContent = data.list[i].dt_txt;
+            var index = 0;
+            for (var i = 0; i < 40; i++) {
+                if (i==0) {
+                var currentDay = (data.list[i].dt_txt).split(" ")[0];
+
+                var convertedDay = dayjs(currentDay);
+                var humanReadableDate = convertedDay.locale('en').format('DD, MMMM, YYYY');
+
+                day[i].textContent = humanReadableDate;
                 temps[i].textContent = data.list[i].main.temp;
                 humidity[i].textContent = data.list[i].main.humidity;
                 wind[i].textContent = data.list[i].wind.speed;
@@ -98,7 +107,33 @@ function getWeather(lat, lon) {
                 } else {
                     emoji[i].textContent = '☀️';
                 }
+                index++;
+            } else {
+                var newDay = (data.list[i].dt_txt).split(" ")[0];
+                console.log(newDay);
+                if (newDay == currentDay) {
+                    continue;
+                } else {
+                    var currentDay = newDay;
+                    var convertedDay = dayjs(newDay);
+                    var humanReadableDate = convertedDay.locale('en').format('DD, MMMM, YYYY');
+                    day[index].textContent = humanReadableDate;
+                    temps[index].textContent = data.list[index].main.temp;
+                    humidity[index].textContent = data.list[index].main.humidity;
+                    wind[index].textContent = data.list[index].wind.speed;
+
+                    var weather = data.list[index].weather[0].main;
+                    if (weather == "Clouds") {
+                        emoji[index].textContent = '☁️';
+                    } else if (weather == "Rain") {
+                        emoji[index].textContent = '⛈️';
+                    } else {
+                        emoji[index].textContent = '☀️';
+                    }
+                    index++;
+                }
             }
+        }
 
         })
         .catch(function (error) {
@@ -122,3 +157,6 @@ searchWeather.addEventListener("click", function () {
 
 
 });
+
+
+
