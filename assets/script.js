@@ -1,8 +1,10 @@
 const apiKey = "20f9a6ae4f100c34e7ae026eafd6150d";
 var cityName = document.getElementById("city-name");
+const setCity = document.getElementById("current-city");
 var searchWeather = document.getElementById("search-weather");
 const localeSettings = {};
 dayjs.locale(localeSettings);
+var all_cities = JSON.parse(localStorage.getItem('top_10_cities')) || [];
 
 var day = [
     document.getElementById("day1"),
@@ -142,10 +144,60 @@ function getWeather(lat, lon) {
 }
 
 
+function saveCity(cityName) {
+
+    if (all_cities.length > 9) {
+        all_cities.shift();
+    }
+
+    const index = all_cities.indexOf(cityName);
+    console.log("Index is: " + index);
+    console.log("ALL cities is: " + all_cities);
+    if (index === -1) {
+      all_cities.push(cityName);
+    } else {
+        all_cities.splice(index, 1);
+        all_cities.push(cityName);
+    }
+    localStorage.setItem('top_10_cities', JSON.stringify(all_cities));
+
+}
+
+function generateCitySearch() {
+    const container = document.querySelector('.button-container');
+    container.innerHTML = '';
+    const buttons = [];
+
+    for (let i = 0; i < all_cities.length; i++) {
+      const button = document.createElement('button');
+      button.textContent = all_cities[i];
+      button.id = 'button' + (i + 1);
+      button.className = 'btn btn-primary';
+      button.addEventListener('click', function() {
+        const cityButton = this.textContent;
+        setCity.textContent = cityButton;
+        console.log(cityButton);
+        saveCity(cityButton);
+        getLatLon(cityButton).then(function (data) {
+        var lat = data.lat;
+        var lon = data.lon;
+        console.log(lat, lon);
+
+        getWeather(lat, lon);
+
+    });
+      });
+    buttons.push(button);
+    container.appendChild(button);
+}}
+
+
 searchWeather.addEventListener("click", function () {
     event.preventDefault();
     var currentCity = cityName.value;
+    setCity.textContent = currentCity;
     console.log(currentCity);
+    saveCity(currentCity);
     getLatLon(currentCity).then(function (data) {
         var lat = data.lat;
         var lon = data.lon;
@@ -154,9 +206,7 @@ searchWeather.addEventListener("click", function () {
         getWeather(lat, lon);
 
     });
-
-
+    generateCitySearch();
 });
 
-
-
+generateCitySearch();
