@@ -103,9 +103,9 @@ function getWeather(lat, lon) {
                 if (weather == "Clouds") {
                     emoji[i].textContent = '☁️';
                 } else if (weather == "Rain") {
-                    emoji[i].textContent = '⛈️';
+                    emoji[i].textContent = '🌧️';
                 } else {
-                    emoji[i].textContent = '☀️';
+                    emoji[i].textContent = '🌞';
                 }
                 index++;
             } else {
@@ -126,9 +126,9 @@ function getWeather(lat, lon) {
                     if (weather == "Clouds") {
                         emoji[index].textContent = '☁️';
                     } else if (weather == "Rain") {
-                        emoji[index].textContent = '⛈️';
+                        emoji[index].textContent = '🌧️';
                     } else {
-                        emoji[index].textContent = '☀️';
+                        emoji[index].textContent = '🌞';
                     }
                     index++;
                 }

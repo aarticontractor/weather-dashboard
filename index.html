@@ -18,7 +18,7 @@
     <div class="container-fluid">
       <a class="navbar-brand">Weather Dashboard</a>
       <form class="d-flex">
-        <input class="form-control me-2" id="city-name" type="search" placeholder="Search" aria-label="Search">
+        <input class="form-control me-2" id="city-name" type="search" placeholder="Search city" aria-label="Search">
         <button class="btn btn-outline-success" id="search-weather" type="submit">Search</button>
       </form>
     </div>
@@ -35,14 +35,14 @@
       <div class="d-flex justify-content-center">
         <div class="col align-self-center">
           <!-- One of three columns -->
-          <div class="card" style="width: 100%; padding: 0;">
+          <div class="card parent-card" style="width: 100%; padding: 0;">
             
             <div class="card-body">
-              <p class="card-text">Date: <span id="day1"></span></p>
-              <p id="emoji1"></p>
+              <p class="card-text">Today: <span id="day1"></span></p>
+              <p class="emoji" id="emoji1"></p>
             </div>
             <ul class="list-group list-group-flush"> 
-              <li class="list-group-item">Temperature: <span id="temp1"></span></li>
+              <li class="list-group-item">Temp(F): <span id="temp1"></span></li>
               <li class="list-group-item">Humidity: <span id="humidity1"></span></li>
               <li class="list-group-item">Wind Speed: <span id="wind1"></span></li>
             </ul>
@@ -50,18 +50,18 @@
         </div>
       </div>
     </div>  
-    <div class="border border-5 rounded mx-auto" style="width: 75%; margin-top: 2%; float: left;">
+    <div class="border border-5 rounded mx-auto" style="width: 78%; margin-top: 2%; float: left;">
       <div class="d-flex justify-content-center">
         <div class="col align-self-start">
           <!-- One of three columns -->
-          <div class="card">
+          <div class="card sub-card">
             
             <div class="card-body">
               <p class="card-text">Date: <span id="day2"></span></p>
-              <p id="emoji2"></p>
+              <p class="emoji" id="emoji2"></p>
             </div>
             <ul class="list-group list-group-flush">
-              <li class="list-group-item">Temperature: <span id="temp2"></span></li>
+              <li class="list-group-item">Temp(F): <span id="temp2"></span></li>
               <li class="list-group-item">Humidity: <span id="humidity2"></span></li>
               <li class="list-group-item">Wind Speed: <span id="wind2"></span></li>
             </ul>
@@ -69,14 +69,14 @@
         </div>
         <div class="col align-self-center">
           <!-- One of three columns -->
-          <div class="card">
+          <div class="card sub-card">
             
             <div class="card-body">
               <p class="card-text">Date: <span id="day3"></span></p>
-              <p id="emoji3"></p>
+              <p class="emoji" id="emoji3"></p>
             </div>
             <ul class="list-group list-group-flush">
-              <li class="list-group-item">Temperature: <span id="temp3"></span></li>
+              <li class="list-group-item">Temp(F): <span id="temp3"></span></li>
               <li class="list-group-item">Humidity: <span id="humidity3"></span></li>
               <li class="list-group-item">Wind Speed: <span id="wind3"></span></li>
             </ul>
@@ -84,14 +84,14 @@
         </div>
         <div class="col align-self-center">
           <!-- One of three columns -->
-          <div class="card">
+          <div class="card sub-card">
             
             <div class="card-body">
               <p class="card-text">Date: <span id="day4"></span></p>
-              <p id="emoji4"></p>
+              <p class="emoji" id="emoji4"></p>
             </div>
             <ul class="list-group list-group-flush">
-              <li class="list-group-item">Temperature: <span id="temp4"></span></li>
+              <li class="list-group-item">Temp(F): <span id="temp4"></span></li>
               <li class="list-group-item">Humidity: <span id="humidity4"></span></li>
               <li class="list-group-item">Wind Speed: <span id="wind4"></span></li>
             </ul>
@@ -99,14 +99,14 @@
         </div>
         <div class="col align-self-center">
           <!-- One of three columns -->
-          <div class="card">
+          <div class="card sub-card">
             
             <div class="card-body">
               <p class="card-text">Date: <span id="day5"></span></p>
-              <p id="emoji5"></p>
+              <p class="emoji" id="emoji5"></p>
             </div>
             <ul class="list-group list-group-flush">
-              <li class="list-group-item">Temperature: <span id="temp5"></span></li>
+              <li class="list-group-item">Temp(F): <span id="temp5"></span></li>
               <li class="list-group-item">Humidity: <span id="humidity5"></span></li>
               <li class="list-group-item">Wind Speed: <span id="wind5"></span></li>
             </ul>
@@ -114,14 +114,14 @@
         </div>
         <div class="col align-self-end">
           <!-- One of three columns -->
-          <div class="card">
+          <div class="card sub-card">
             
             <div class="card-body">
               <p class="card-text">Date: <span id="day6"></span></p>
-              <p id="emoji6"></p>
+              <p class="emoji" id="emoji6"></p>
             </div>
             <ul class="list-group list-group-flush">
-              <li class="list-group-item">Temperature: <span id="temp6"></span></li>
+              <li class="list-group-item">Temp(F): <span id="temp6"></span></li>
               <li class="list-group-item">Humidity: <span id="humidity6"></span></li>
               <li class="list-group-item">Wind Speed: <span id="wind6"></span></li>
             </ul>

@@ -1,18 +1,32 @@
 body {
-    background: linear-gradient(to bottom, #00ffff, #ff00ff);
+    background: linear-gradient(to bottom, #74fcec, #1b444a);
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 20px;
     text-align: center;
 }
 
-.card {
+.parent-card {
     width: 14rem;
-    height: 27rem;
+    height: 24rem;
     margin-bottom: 0%;
-    background-color: lavenderblush;
-    
-    
+    background-color: rgb(15, 67, 71);
+    color: bisque;  
 }
+.sub-card {
+    width: 14rem;
+    height: 19rem;
+    margin-bottom: 0%;
+    background-color: rgb(15, 67, 71);
+    color: bisque;  
+}
+
+
+
+.emoji{
+    font-size: 3em;
+}
+
+
 
 footer {
     padding: 1rem;
@@ -29,6 +43,3 @@ footer {
     z-index: 999;
 }
 
-.container-right {
-    float: right;
-}
