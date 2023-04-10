@@ -24,8 +24,8 @@
     <div class="container-fluid">
       <a class="navbar-brand">Weather Dashboard</a>
       <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
+        <input class="form-control me-2" id="city-name" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" id="search-weather" type="submit">Search</button>
       </form>
     </div>
   </nav>
@@ -44,12 +44,13 @@
           <div class="card" style="width: 100%; padding: 0;">
             
             <div class="card-body">
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <p class="card-text">Date: <span id="day1"></span></p>
+              <p id="emoji1"></p>
             </div>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">An item</li>
-              <li class="list-group-item">A second item</li>
-              <li class="list-group-item">A third item</li>
+            <ul class="list-group list-group-flush"> 
+              <li class="list-group-item">Temperature: <span id="temp1"></span></li>
+              <li class="list-group-item">Humidity: <span id="humidity1"></span></li>
+              <li class="list-group-item">Wind Speed: <span id="wind1"></span></li>
             </ul>
           </div>
         </div>
@@ -60,56 +61,76 @@
         <div class="col align-self-start">
           <!-- One of three columns -->
           <div class="card">
-            <img src="assets/clear-sky.jpg" class="card-img-top" alt="...">
+            
             <div class="card-body">
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                content.</p>
+              <p class="card-text">Date: <span id="day2"></span></p>
+              <p id="emoji2"></p>
             </div>
             <ul class="list-group list-group-flush">
-              <li class="list-group-item">An item</li>
-              <li class="list-group-item">A second item</li>
-              <li class="list-group-item">A third item</li>
+              <li class="list-group-item">Temperature: <span id="temp2"></span></li>
+              <li class="list-group-item">Humidity: <span id="humidity2"></span></li>
+              <li class="list-group-item">Wind Speed: <span id="wind2"></span></li>
             </ul>
           </div>
         </div>
         <div class="col align-self-center">
           <!-- One of three columns -->
           <div class="card">
+            
             <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                content.</p>
+              <p class="card-text">Date: <span id="day3"></span></p>
+              <p id="emoji3"></p>
             </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Temperature: <span id="temp3"></span></li>
+              <li class="list-group-item">Humidity: <span id="humidity3"></span></li>
+              <li class="list-group-item">Wind Speed: <span id="wind3"></span></li>
+            </ul>
           </div>
         </div>
         <div class="col align-self-center">
           <!-- One of three columns -->
           <div class="card">
+            
             <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                content.</p>
+              <p class="card-text">Date: <span id="day4"></span></p>
+              <p id="emoji4"></p>
             </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Temperature: <span id="temp4"> F</span></li>
+              <li class="list-group-item">Humidity: <span id="humidity4"></span></li>
+              <li class="list-group-item">Wind Speed: <span id="wind4"></span></li>
+            </ul>
           </div>
         </div>
         <div class="col align-self-center">
           <!-- One of three columns -->
           <div class="card">
+            
             <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                content.</p>
+              <p class="card-text">Date: <span id="day5"></span></p>
+              <p id="emoji5"></p>
             </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Temperature: <span id="temp5"></span> F</li>
+              <li class="list-group-item">Humidity: <span id="humidity5"></span></li>
+              <li class="list-group-item">Wind Speed: <span id="wind5"></span></li>
+            </ul>
           </div>
         </div>
         <div class="col align-self-end">
           <!-- One of three columns -->
           <div class="card">
+            
             <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                content.</p>
+              <p class="card-text">Date: <span id="day6"></span></p>
+              <p id="emoji6"></p>
             </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Temperature: <span id="temp6"></span></li>
+              <li class="list-group-item">Humidity: <span id="humidity6"></span></li>
+              <li class="list-group-item">Wind Speed: <span id="wind6"></span></li>
+            </ul>
           </div>
         </div>
       </div>

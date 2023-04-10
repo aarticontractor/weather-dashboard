@@ -1,5 +1,5 @@
 .card {
-    width: 18rem;
+    width: 14rem;
     height: 27rem;
     margin-bottom: 0%;
 }
@@ -17,4 +17,8 @@ footer {
     background-color: rgb(84, 84, 124);
     box-sizing: border-box;
     z-index: 999;
+}
+
+.container-right {
+    float: right;
 }
