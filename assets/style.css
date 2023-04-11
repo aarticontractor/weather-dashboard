@@ -28,19 +28,18 @@ body {
 
 
 
-footer {
-    padding: 1rem;
-    clear: both;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+.footer  {
+    /* padding: 1rem; */
+    font-family:Georgia, 'Times New Roman', Times, serif
     text-align: center;
-    color: black;
+    color: bisque;
     position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: rgb(84, 84, 124);
-    box-sizing: border-box;
-    z-index: 999;
+    background-color: 
+    /* box-sizing: border-box; */
+    /* z-index: 999; */
 }
 
 .button-container {
@@ -55,5 +54,7 @@ footer {
 display: block;
 width: 100%;
 margin-bottom: 10px;
-
+background-color: rgb(201, 170, 132);
+color: black;
+border-color: black;
 }

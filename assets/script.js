@@ -88,6 +88,9 @@ function getWeather(lat, lon) {
             // console.log(data);
             var city = data.city.name;
             console.log(data);
+            setCity.textContent = city;
+            saveCity(city);
+            generateCitySearch();
             var index = 0;
             for (var i = 0; i < 40; i++) {
                 if (i==0) {
@@ -195,9 +198,7 @@ function generateCitySearch() {
 searchWeather.addEventListener("click", function () {
     event.preventDefault();
     var currentCity = cityName.value;
-    setCity.textContent = currentCity;
-    console.log(currentCity);
-    saveCity(currentCity);
+    
     getLatLon(currentCity).then(function (data) {
         var lat = data.lat;
         var lon = data.lon;
@@ -206,7 +207,6 @@ searchWeather.addEventListener("click", function () {
         getWeather(lat, lon);
 
     });
-    generateCitySearch();
 });
 
 generateCitySearch();
