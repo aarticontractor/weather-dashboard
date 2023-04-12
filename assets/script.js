@@ -53,7 +53,7 @@ var emoji = [
 
 function getLatLon(currentCity) {
     var apiUrl =
-        "http://api.openweathermap.org/geo/1.0/direct?q=" +
+        "https://api.openweathermap.org/geo/1.0/direct?q=" +
         currentCity +
         "&limit=5&appid=" +
         apiKey;
@@ -78,7 +78,7 @@ function getLatLon(currentCity) {
 
 
 function getWeather(lat, lon) {
-    var weatherUrl = "http://api.openweathermap.org/data/2.5/forecast?lat=" + lat + "&lon=" + lon + "&appid=" + apiKey + "&units=imperial"
+    var weatherUrl = "https://api.openweathermap.org/data/2.5/forecast?lat=" + lat + "&lon=" + lon + "&appid=" + apiKey + "&units=imperial"
     console.log(weatherUrl);
     return fetch(weatherUrl)
         .then(function (data) {
